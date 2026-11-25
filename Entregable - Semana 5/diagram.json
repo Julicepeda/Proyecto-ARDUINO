@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "author": "IoT Entrega 2 - Politecnico Grancolombiano",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 105,
+      "left": 35,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": -150,
+      "left": 20,
+      "attrs": {
+        "size": "half"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "verde",
+      "top": -94,
+      "left": 128,
+      "attrs": {
+        "color": "green",
+        "label": "Verde - D2"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "rojo",
+      "top": -94,
+      "left": 262,
+      "attrs": {
+        "color": "red",
+        "label": "Rojo - D3"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rv",
+      "top": -37,
+      "left": 133,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rr",
+      "top": -37,
+      "left": 267,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "uno:2",
+      "verde:A",
+      "green",
+      []
+    ],
+    [
+      "verde:C",
+      "rv:1",
+      "black",
+      []
+    ],
+    [
+      "rv:2",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:3",
+      "rojo:A",
+      "red",
+      []
+    ],
+    [
+      "rojo:C",
+      "rr:1",
+      "black",
+      []
+    ],
+    [
+      "rr:2",
+      "uno:GND.1",
+      "black",
+      []
+    ]
+  ],
+  "serialMonitor": {
+    "display": "always",
+    "newline": "lf",
+    "convertEol": false
+  },
+  "dependencies": {}
+}
